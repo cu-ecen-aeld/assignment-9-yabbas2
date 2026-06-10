@@ -1,0 +1,14 @@
+#!/bin/sh
+
+case "$1" in
+    start)
+        sh /etc/init.d/aesdchar_load
+        ;;
+    stop)
+        sh /etc/init.d/aesdchar_unload
+        ;;
+    *)
+        echo "Usage: $0 {start|stop}"
+        exit 1
+        ;;
+esac
